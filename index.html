@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website - Richard Agor</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        header {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* background-color: rgb(50, 70, 136); */
+            color: #fff;
+            height: 60px;
+            padding: 50px;
+        }
+         header a {
+            color: #fff;
+            text-decoration: none;
+         }
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        header .navbar {
+            display: flex;
+            align-items: center;
+        }
+         header .navbar a{
+            padding: 15px;
+            margin: 5px;
+            background: inherit 0.5;
+         }
+         .hero {
+            position: relative;
+            min-height: 90vh;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+         }
+         .hero::before {
+            content: '';
+            position: absolute;
+           /* Stacks a 50% opacity black overlay on top of your background image */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/banner.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            filter: blur(8px);
+            backdrop-filter: 1.5;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+            transform: scale(1.05);
+
+         }
+         .hero-content {
+            border: 1px dashed blue;
+            color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+         }
+         .hero-content .title {
+            font-size: 82px;
+            
+         }
+
+         .hero-content .buttons {
+            padding: 20px;
+         }
+         .hero-content .buttons button{
+            padding: 10px 30px;
+            border-radius: 50px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s ease-in-out;
+         }
+
+         .hero-content .buttons button:hover {
+            background-color: rgb(46, 46, 115);
+            color: #fff;
+         }
+         footer .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #262525;
+            color: #fff;
+            padding: 20px;
+         }
+          footer .footer-bottom a{
+            color: #fff;
+            text-decoration: none;
+          }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Richard Agor</div>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <div>
+                <h1 class="title">Hi there, I'm Richard.</h1>
+                <h1 class="subtitle">I'm a Web Developer.</h1>
+                <h3 class="description">Lets do business together. This is my first job, and I'm willing to provide my services at a cool rate to create connections and trust.</h3>
+            </div>
+            <div class="buttons">
+                <button class="contact">Contact Me</button>
+                <button class="explore">Explore More</button>
+            </div>
+          
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+     <footer>
+        <div class="footer-bottom">
+            <div>Copyright © All rights reserved. 2026</div>
+            <div><a href="">Privacy</a></div>
+        </div>
+     </footer>
+
+</body>
+</html>
